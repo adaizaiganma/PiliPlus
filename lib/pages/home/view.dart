@@ -99,6 +99,11 @@ class _HomePageState extends CommonPageState<HomePage>
       children: [
         searchBar(),
         const SizedBox(width: 4),
+        IconButton(
+          tooltip: '短视频',
+          onPressed: () => Get.toNamed('/story'),
+          icon: const Icon(Icons.smart_display_outlined),
+        ),
         msgBadge(_mainController),
         const SizedBox(width: 8),
         userAvatar(colorScheme: _colorScheme, mainController: _mainController),
